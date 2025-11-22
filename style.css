@@ -226,44 +226,65 @@ section #text {
 .fishes {
     position: absolute;
     opacity: 0.8;
-    --swim-distance: 25px;
+    --swim-vertical-distance: 60px;
+    --swim-horizontal-distance: 120px;
     --swim-duration: 7s;
-    animation: swim-vertical var(--swim-duration) ease-in-out infinite alternate;
+    animation: swim var(--swim-duration) ease-in-out infinite;
 }
 
-@keyframes swim-vertical {
+@keyframes swim {
     0% {
-        transform: translateY(0);
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(calc(var(--swim-horizontal-distance) * 0.5), calc(var(--swim-vertical-distance) * -1));
+    }
+
+    50% {
+        transform: translate(var(--swim-horizontal-distance), 0);
+    }
+
+    75% {
+        transform: translate(calc(var(--swim-horizontal-distance) * 0.5), var(--swim-vertical-distance));
     }
 
     100% {
-        transform: translateY(calc(var(--swim-distance) * -1));
+        transform: translate(0, 0);
     }
 }
 
 /* Properties for each fish and sea bed*/
 #fish1 {
     top: 0%;
-    --swim-duration: 8s;
-    --swim-distance: 35px;
+    left: 8%;
+    --swim-duration: 8.5s;
+    --swim-vertical-distance: 80px;
+    --swim-horizontal-distance: 160px;
 }
 
 #fish2 {
     top: 32%;
-    --swim-duration: 7s;
-    --swim-distance: 28px;
+    left: 30%;
+    --swim-duration: 8s;
+    --swim-vertical-distance: 70px;
+    --swim-horizontal-distance: 150px;
 }
 
 #fish3 {
     top: 60%;
-    --swim-duration: 9s;
-    --swim-distance: 32px;
+    left: 55%;
+    --swim-duration: 9.5s;
+    --swim-vertical-distance: 85px;
+    --swim-horizontal-distance: 140px;
 }
 
 #fish4 {
     top: 87%;
-    --swim-duration: 6.5s;
-    --swim-distance: 24px;
+    left: 74%;
+    --swim-duration: 7.5s;
+    --swim-vertical-distance: 65px;
+    --swim-horizontal-distance: 130px;
 }
 
 #seabed {

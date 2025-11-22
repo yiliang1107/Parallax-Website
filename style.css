@@ -226,44 +226,23 @@ section #text {
 .fishes {
     position: absolute;
     opacity: 0.8;
-    --swim-distance: 25px;
-    --swim-duration: 7s;
-    animation: swim-vertical var(--swim-duration) ease-in-out infinite alternate;
-}
-
-@keyframes swim-vertical {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(calc(var(--swim-distance) * -1));
-    }
 }
 
 /* Properties for each fish and sea bed*/
 #fish1 {
     top: 0%;
-    --swim-duration: 8s;
-    --swim-distance: 35px;
 }
 
 #fish2 {
     top: 32%;
-    --swim-duration: 7s;
-    --swim-distance: 28px;
 }
 
 #fish3 {
     top: 60%;
-    --swim-duration: 9s;
-    --swim-distance: 32px;
 }
 
 #fish4 {
     top: 87%;
-    --swim-duration: 6.5s;
-    --swim-distance: 24px;
 }
 
 #seabed {
